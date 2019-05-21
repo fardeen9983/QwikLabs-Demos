@@ -24,7 +24,8 @@ In the GCP Console, on the top left of the screen, select Navigation menu > Comp
 You can create a new instance or import a container.
 
 **Configuration Parameters**
-Field|Value|Additional Information|
+
+Field|Value|Additional Information
 -|-|-
 Name|gcelab| 
 Region|us-central1 (Iowa) or asia-south1 (Mumbai)|Learn more about regions in Regions & Zones documentation.
