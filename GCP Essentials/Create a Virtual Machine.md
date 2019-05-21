@@ -1,6 +1,10 @@
 # Virtual machines in GCP
 GCP allows us to create virtual machines on the Compute engine with a variety of Operating systems. We can also later on connect these VM's with another servers. 
 
+Virtual machines are deployed on systems spread across regions further divided into zones. So VMs live in a zone and to ad any additional GCP resource to it both will be needed to be in the same zone. Also we can assign a static IP to the VM instance if in the same zone.
+
+[More on Zones and Regions](https://cloud.google.com/compute/docs/regions-zones)
+
 **What you'll do**
 
 * Create a virtual machine with the GCP Console
@@ -12,3 +16,46 @@ GCP allows us to create virtual machines on the Compute engine with a variety of
 **Google CLoud Shell**
 
 Google Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud. Google Cloud Shell provides command-line access to your GCP resources.
+
+## Create a new instance
+
+In the GCP Console, on the top left of the screen, select Navigation menu > Compute Engine > VM Instances:
+
+You can create a new instance or import a container.
+
+**Configuration Parameters**
+Field|Value|Additional Information|
+-|-|-
+Name|gcelab| 
+Region|us-central1 (Iowa) or asia-south1 (Mumbai)|Learn more about regions in Regions & Zones documentation.
+Zone|us-central1-c or asia-south1-c|Note: remember the zone that you selected, you'll need it later. Learn more about zones in Regions & Zones documentation.
+Machine Type|2 vCPUs|This is a (n1-standard-2),2-CPU, 7.5GB RAM instance. There are a number of machine types, ranging from micro instance types to 32-core/208GB RAM instance types. Learn more in the Machine Types documentation. Note: A new project has a default resource quota, which may limit the number of CPU cores. You can request more when you work on projects outside of this lab.
+Boot Disk|New 10 GB standard persistent disk.                  OS Image: Debian GNU/Linux 9 (stretch)|There are a number of images to choose from, including: Debian, Ubuntu, CoreOS as well as premium images such as Red Hat Enterprise Linux and Windows Server. See Operating System documentation for more detail.
+Firewall|Check Allow HTTP traffic|Check this option so to access a webserver that you'll install later. Note: This will automatically create firewall rule to allow HTTP traffic on port 80.
+
+To we also launch an SSH client to access this instance
+
+[More on SSH connection](https://cloud.google.com/compute/docs/instances/connecting-to-instance)
+
+## Installing NGINX Web server
+
+1. Get root access
+    >sudo su -
+2. Update OS
+    > apt-get update
+3. Install NGINX
+    > apt-get install nginx -y
+4. Check that NGINX is running
+    >ps auwx | grep nginx
+5. Simply access the NGINX web server through the instance's external IP.
+
+## Create an instance with gcloud CLI tools
+ Run the gcloud command 
+    > gcloud compute instances create [ instance-name ] --machine-type -[ machine type: n1-standard-2 ] --zone -[ zone name : us-central1-a ]
+
+**[Custom machine types](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type)**
+
+Run gcloud compute instances create --help to get default command params
+
+### Connect to instance through gcloud ssh
+>gcloud compute ssh [ instance name :gcelab2 ]  --zone=[ YOUR_ZONE : us-central1-a ]
