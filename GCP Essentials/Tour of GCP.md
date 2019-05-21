@@ -62,27 +62,36 @@ Besides pre-installed toolkits, Cloud Shell also comes with the standard unix co
 
 [gcloud command line tool guide](https://cloud.google.com/sdk/gcloud/)
 
-1. gcloud auth list
-    
+1. List out all users
+    ```
+    gcloud auth list
+    ```
     Credentialed Accounts
 ACTIVE  ACCOUNT
-*       googlefree125044_student@qwiklabs.net
+    googlefree125044_student@qwiklabs.net
     To set the active account, run:
-
+    ```
     $ gcloud config set account `ACCOUNT`
-
+    ```
     To take a quick anonymous survey, run:
-
+    ```
     $ gcloud alpha survey
+    ```
 2.  gcloud config list project
     
     List out the projects with their IDs
 2. Create a file
-    >touch test.txt
+    ```
+    touch test.txt
+    ```
 3. Fetch diles list in current directory
-    >ls
+    ```
+    ls
+    ```
 4. Edit files in nano editor
-    >nano test.txt
+    ```
+    nano test.txt
+    ```
 
     To save the file hold **ctrl + X** and then press **Y** followed by **Enter**
 5. Cat a similar command like nano

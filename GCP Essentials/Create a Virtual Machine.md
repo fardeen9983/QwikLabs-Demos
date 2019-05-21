@@ -41,22 +41,34 @@ To we also launch an SSH client to access this instance
 ## Installing NGINX Web server
 
 1. Get root access
-    >sudo su -
+    ```
+    sudo su -
+    ```
 2. Update OS
-    > apt-get update
+    ```
+    apt-get update
+    ```
 3. Install NGINX
-    > apt-get install nginx -y
+    ```
+    apt-get install nginx -y
+    ```
 4. Check that NGINX is running
-    >ps auwx | grep nginx
+    ```
+    ps auwx | grep nginx
+    ```
 5. Simply access the NGINX web server through the instance's external IP.
 
 ## Create an instance with gcloud CLI tools
  Run the gcloud command 
-    > gcloud compute instances create [ instance-name ] --machine-type -[ machine type: n1-standard-2 ] --zone -[ zone name : us-central1-a ]
 
+```
+gcloud compute instances create [ instance-name ] --machine-type -[ machine type: n1-standard-2 ] --zone -[ zone name : us-central1-a ]
+``` 
 **[Custom machine types](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type)**
 
 Run gcloud compute instances create --help to get default command params
 
 ### Connect to instance through gcloud ssh
->gcloud compute ssh [ instance name :gcelab2 ]  --zone=[ YOUR_ZONE : us-central1-a ]
+```
+gcloud compute ssh [ instance name :gcelab2 ]  --zone=[ YOUR_ZONE : us-central1-a ]
+```
