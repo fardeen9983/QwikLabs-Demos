@@ -33,9 +33,9 @@ ____
 * Also, for DNS compliance and future compatibility, you should not use underscores (_) or have a period adjacent to another period or dash. For example, ".." or "-." or ".-" are not valid in DNS names.
 ___
 
-## **Uplpading Objects**
+## **Uploading Objects**
 Drag files to the Drop section to place them in the bucket.
-
+s
 Or you can use the **Upload Files** option
 
 Object names must be unique only within a given bucket
