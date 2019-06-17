@@ -1,0 +1,2 @@
+# Baseline : Develop and Deploy
+In this introductory-level quest, you will learn the fundamentals of developing and deploying applications on the Google Cloud Platform. You will get hands-on experience with the Google App Engine framework by launching applications written in languages like Python, Ruby, and Java (just to name a few). You will see first-hand how straightforward and powerful GCP application frameworks are, and how easily they integrate with GCP database, data-loss prevention, and security services.
