@@ -67,7 +67,7 @@ To test the trivia application, you will need to enable the necessary permission
    * Voice & Audio Activity
    * Now close the Activity Controls page.
 ### **Test the Application**
-Back in the Actions console, verify that your application has been built. 
+Back in the Actions console, verify that your application has been built.
 
 
 1. Click on the TEST ACTION button. This will bring you to the Actions Simulator page, where you can test your Assistant application without the need of a device like a Google Home.
